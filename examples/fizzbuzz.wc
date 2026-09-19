@@ -1,0 +1,20 @@
+# FizzBuzz in Wordcode
+
+set count to one
+
+while count is less than or equal to fifteen
+    if count modulo by fifteen is equal to zero then
+        display "FizzBuzz"
+    else
+        if count modulo by three is equal to zero then
+            display "Fizz"
+        else
+            if count modulo by five is equal to zero then
+                display "Buzz"
+            else
+                display count
+            end
+        end
+    end
+    set count to count plus one
+end

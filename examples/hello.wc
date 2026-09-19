@@ -1,0 +1,6 @@
+# Hello World in Wordcode
+
+display "Hello, World from Wordcode!"
+
+set greeting to "Welcome to English-based coding"
+display greeting
