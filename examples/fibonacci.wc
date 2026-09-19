@@ -1,0 +1,17 @@
+# Fibonacci Sequence in Wordcode
+
+define fibonacci with n
+    if n is less than or equal to one then
+        return n
+    else
+        return fibonacci(n minus one) plus fibonacci(n minus two)
+    end
+end
+
+display "Fibonacci series up to ten terms:"
+
+set i to zero
+while i is less than ten
+    display "Term", i, "is", fibonacci(i)
+    set i to i plus one
+end
