@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Wordcode - Thanks for Installing!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo-group">
+                <span class="logo-badge">.wc</span>
+                <span class="logo-text">Wordcode <span class="badge-beta">BETA</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#quickstart">Quick Start</a>
+                <a href="#features">Features</a>
+                <a href="#examples">Examples</a>
+                <a href="#cheatsheet">Syntax Guide</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-tag">🎉 Installation Complete</div>
+            <h1 class="hero-title">Thanks for installing <span class="gradient-text">Wordcode</span>!</h1>
+            <p class="hero-subtitle">
+                An intuitive, readable programming language designed to write code using <strong>only English words</strong>. No cryptic math symbols required.
+            </p>
+            <div class="hero-actions">
+                <a href="#quickstart" class="btn btn-primary">Get Started</a>
+                <a href="#examples" class="btn btn-secondary">Explore Examples</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Commands -->
+    <section id="quickstart" class="section quickstart-section">
+        <div class="container">
+            <h2 class="section-title">🚀 Quick Start Guide</h2>
+            <p class="section-desc">Get up and running in your terminal with Wordcode in seconds.</p>
+
+            <div class="grid grid-3">
+                <div class="card command-card">
+                    <div class="card-header">
+                        <span class="step-num">1</span>
+                        <h3>Launch REPL</h3>
+                    </div>
+                    <p>Start the interactive Wordcode shell to execute commands live.</p>
+                    <div class="code-box">
+                        <code>python3 -m wordcode</code>
+                        <button class="copy-btn" data-copy="python3 -m wordcode">Copy</button>
+                    </div>
+                </div>
+
+                <div class="card command-card">
+                    <div class="card-header">
+                        <span class="step-num">2</span>
+                        <h3>Run a Script</h3>
+                    </div>
+                    <p>Execute any Wordcode file ending with the <code>.wc</code> extension.</p>
+                    <div class="code-box">
+                        <code>python3 -m wordcode examples/hello.wc</code>
+                        <button class="copy-btn" data-copy="python3 -m wordcode examples/hello.wc">Copy</button>
+                    </div>
+                </div>
+
+                <div class="card command-card">
+                    <div class="card-header">
+                        <span class="step-num">3</span>
+                        <h3>Check Version</h3>
+                    </div>
+                    <p>Verify your installation and current language version.</p>
+                    <div class="code-box">
+                        <code>python3 -m wordcode --version</code>
+                        <button class="copy-btn" data-copy="python3 -m wordcode --version">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <h2 class="section-title">✨ Why Wordcode?</h2>
+            <p class="section-desc">Designed for modern readability and effortless learning.</p>
+
+            <div class="grid grid-3">
+                <div class="card feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Natural English Keywords</h3>
+                    <p>Express math operations and comparisons using natural words like <code>plus</code>, <code>minus</code>, <code>divided by</code>, and <code>is equal to</code>.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">🔢</div>
+                    <h3>Word Numbers</h3>
+                    <p>Native support for English number words such as <code>one</code>, <code>five</code>, <code>twenty</code>, <code>hundred</code> alongside standard digits.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Clean Block Syntax</h3>
+                    <p>Self-explanatory control structures with <code>if ... then ... else ... end</code>, <code>while ... end</code>, and <code>repeat ... times ... end</code>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Examples Explorer -->
+    <section id="examples" class="section examples-section">
+        <div class="container">
+            <h2 class="section-title">💻 Interactive Code Showcase</h2>
+            <p class="section-desc">Explore sample Wordcode scripts and simulate their output.</p>
+
+            <div class="example-viewer">
+                <div class="example-tabs">
+                    <button class="tab-btn active" data-example="hello">hello.wc</button>
+                    <button class="tab-btn" data-example="fizzbuzz">fizzbuzz.wc</button>
+                    <button class="tab-btn" data-example="fibonacci">fibonacci.wc</button>
+                </div>
+
+                <div class="example-content">
+                    <div class="code-panel">
+                        <div class="panel-header">
+                            <span id="example-filename">hello.wc</span>
+                            <button id="copy-sample-btn" class="btn btn-sm">Copy Code</button>
+                        </div>
+                        <pre><code id="example-code-display"># hello.wc
+display "Hello, World from Wordcode!"
+
+set name to "Alice"
+display "Welcome", name</code></pre>
+                    </div>
+
+                    <div class="output-panel">
+                        <div class="panel-header">
+                            <span>Simulated Output</span>
+                            <button id="run-sample-btn" class="btn btn-sm btn-accent">Run Sample</button>
+                        </div>
+                        <div class="terminal-body" id="example-output-display">
+                            <div class="term-line output">Hello, World from Wordcode!</div>
+                            <div class="term-line output">Welcome Alice</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Syntax Cheatsheet -->
+    <section id="cheatsheet" class="section cheatsheet-section">
+        <div class="container">
+            <h2 class="section-title">📖 Quick Syntax Reference</h2>
+            <p class="section-desc">A handy cheatsheet for Wordcode language expressions.</p>
+
+            <div class="grid grid-2">
+                <div class="card table-card">
+                    <h3>Arithmetic Operators</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <th>Word Operator</th>
+                                <th>Math Equivalent</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>plus</code></td>
+                                <td><code>+</code></td>
+                                <td><code>five plus ten</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>minus</code></td>
+                                <td><code>-</code></td>
+                                <td><code>twenty minus seven</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>times / multiply</code></td>
+                                <td><code>*</code></td>
+                                <td><code>three times four</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>divided by / divide</code></td>
+                                <td><code>/</code></td>
+                                <td><code>ten divided by two</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>modulo by</code></td>
+                                <td><code>%</code></td>
+                                <td><code>ten modulo by three</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card table-card">
+                    <h3>Comparison Operators</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <th>Word Comparison</th>
+                                <th>Math Equivalent</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>is equal to / equals</code></td>
+                                <td><code>==</code></td>
+                                <td><code>a is equal to b</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>is not equal to</code></td>
+                                <td><code>!=</code></td>
+                                <td><code>a is not equal to b</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>is greater than</code></td>
+                                <td><code>></code></td>
+                                <td><code>score is greater than 50</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>is less than</code></td>
+                                <td><code><</code></td>
+                                <td><code>count is less than 10</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>greater than or equal to</code></td>
+                                <td><code>>=</code></td>
+                                <td><code>age is greater than or equal to 18</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>Wordcode Language Interpreter &copy; 2025. Built for human-readable code.</p>
+            <div class="footer-badge">Extension: <code>.wc</code></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
